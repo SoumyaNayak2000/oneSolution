@@ -17,10 +17,11 @@ const ProductCard = ({
   photo,
   stock,
   cartHandler,
+  productHandler,
 }: ProductsProps) => {
   return (
     <div className="product-card">
-      <img src={"product url"} alt={name} />
+      <img src={photo} alt={name} />
       <p>{name}</p>
       <span>₹{price}</span>
 
