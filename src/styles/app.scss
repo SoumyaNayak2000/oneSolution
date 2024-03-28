@@ -38,6 +38,7 @@
   @import "home";
   @import "cart";
   @import "shipping";
+  @import "login";
 
 
   
@@ -89,6 +90,12 @@
         }
       }
     }
+  }
+
+  .heading {
+    @include heading;
+    margin: 1rem 0;
+    text-align: center;
   }
 
 
