@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import Loader from "./components/Loader.tsx";
 import Header from "./components/Header.tsx";
+import OrderDetails from "./pages/OrderDetails.tsx";
 
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
 const Cart = lazy(() => import("./pages/Cart.tsx"));
 const Shipping = lazy(() => import("./pages/Shipping.tsx"));
 const Login = lazy(() => import("./pages/Login.tsx"));
+const Orders = lazy(() => import("./pages/Orders.tsx"));
 
 //Admin Routes importing
 
@@ -45,6 +47,8 @@ const App = () => {
           {/* logged in user routes */}
           <Route>
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
           </Route>
 
           {/* Admin Routes */}
